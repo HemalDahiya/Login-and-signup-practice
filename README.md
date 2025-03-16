@@ -14,11 +14,18 @@ cd your-repo
 
 run npm i to install all the dependencies
 
+Now we must setup the database schema tables etc, since this is a database first application.
+Run the setup.sql file code in mysql workbench.
+
+
 Create an .env file in root folder.
+
 PORT=3000
-DB_HOST=your-database-host
-DB_USER=your-database-user
-DB_PASS=your-database-password
-SECRET_KEY=your-secret-key
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=Your database passowrd in single quotes
+SECRET_KEY=secreat key for encryption
+DB_Database= Practice1
+NODEMAILER_api=Nodemailer api key
 
 run npm start.
