@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            position: relative;
+        }
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+        .info {
+            margin: 15px 0;
+            font-size: 20px;
+            color: #555555;
+        }
+        #map {
+            width: 100%;
+            height: 300px;
+            margin-top: 30px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 4px solid #e9ecef; /* Light gray border */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .top-right-button,
+        .top-left-button {
+            position: absolute;
+            top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .top-right-button {
+            right: 20px;
+        }
+        .top-right-button:hover {
+            background-color: #0056b3;
+        }
+        .top-left-button {
+            left: 20px;
+        }
+        .top-left-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Button at the top-left corner -->
+    <button class="top-left-button" onclick="window.location.href = '/logout';">Logout</button>
+
+    <!-- Button at the top-right corner -->
+    <button class="top-right-button" onclick="window.location.href = '/info';">All Users Info</button>
+
+    <div class="container">
+        <h1>User Information</h1>
+        <div class="info"><strong>Name:</strong> <%= name %></div>
+        <div class="info"><strong>Email:</strong> <%= email %></div>
+        <div class="info"><strong>Salary:</strong> $<%= salary %></div>
+        <div id="map">
+            <iframe id="mapFrame" src="https://maps.google.com/maps?q=latitude,longitude&z=15&output=embed" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>

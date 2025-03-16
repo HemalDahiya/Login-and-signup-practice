@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-rows: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
+            gap: 1px;
+        }
+        .Lower-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px; /* Adjust gap if needed */
+        }
+        .image-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Add additional styling as needed */
+    </style>
+</head>
+<body>
+    <div style="width: 100%; height: 100vh; background-color: black; position: relative;">
+        <div class="container" style="background-color: white; width: 35vw; height: 80vh; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div class="image-flex" style="background-color: grey;">
+                <img id="image" src="./images/smiling emoji.jpg" alt="Image of user" style="width: 50px; height: 50px; border-radius: 50%;">
+            </div>
+            <div class="image-flex" style="background-color: grey;">
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" type="text" name="email" value="abc@gmail.com">
+                </div>
+            </div>
+            <div class="image-flex" style="background-color: grey;">
+                <div>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" value="abc123">
+                </div>
+            </div>
+            <div class="Lower-container" style="background-color: grey;">
+                <div style="border: saddlebrown solid; background-color: green;">
+                    <button onclick="Signin()" type="submit">Sign in</button>
+                </div>
+                <div style="border: saddlebrown solid; background-color: green;">
+                    <a href="/Signup">Sign up</a>
+                </div>
+                <div style="border: saddlebrown solid; background-color: orange;">
+                    <a href="/ForgotPassword" style="color: white; text-decoration: none;">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div style="width: 100%; background-color: grey; height:30%; display: flex; justify-content: center; align-items: center;">
+        <img src="../Hemalphoto.jpg" alt="Image of user" style="width: 50%; height: 50%; border-radius: 50%; top: 50%;">
+    </div> -->
+
+    <script src="./js/login.js"></script>
+</body>
+</html>

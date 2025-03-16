@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up page</title>
+    <style>
+        /* Ensure body and html cover full viewport height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .maindiv {
+            margin: 10vh auto;
+            width: 50%;
+            height: 80vh; /* Adjusted to 80% of viewport height */
+            max-width: 700.8px; 
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+        @media (max-width: 810px) {
+            .maindiv {
+                margin: 10vh auto;
+                width: 50%;
+                height: 80vh; /* Adjusted to 80% of viewport height */
+                max-width: 700.8px; 
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+        }
+        .leftsubdiv {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1.5fr 2.5fr 1.5fr 1fr;
+            background-color: blue;
+        }
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .rightsubdiv {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1.5fr 7fr;
+            background-color: green;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body style="background-color: grey;">
+    <div class="maindiv">
+        <div class="leftsubdiv">
+            <h1 style="text-align: center; padding-top: 15px;"><b>WELCOME!!!</b></h1>
+            <div style="text-align: center;">
+                <img style="border-radius: 50%;" src="images/Hemalphoto.jpg" alt="Profile Photo" max-width="150px" height="130px">
+            </div>
+            <p style="text-align: center; font-size: 30px;">Take your first step towards success!!</p>
+            <div class="flex">
+                <p style="padding: 5px;">$120.00 <span style="padding: 5px; text-decoration: line-through;">$150.00</span></p>
+            </div>
+        </div>
+        <div class="rightsubdiv">
+            <h3 style="text-align: center;">Sign up</h3>
+            <div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" name="confirm-password" id="confirm-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="salary">Salary</label>
+                    <input type="number" name="salary" id="salary" required>
+                </div>
+                <div style="text-align: center;" class="form-group">
+                    <button onclick="CreateUser()" type="submit">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/signup.js"></script>
+</body>
+</html>
